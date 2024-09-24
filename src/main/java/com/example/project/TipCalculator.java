@@ -15,7 +15,7 @@ public class TipCalculator {
         double perpersontip = (tipamt/people);
         double totalcostperperson = (totalbill/people);
 
-        DecimalFormat df = new DecimalFormat("#.00");
+        DecimalFormat df = new DecimalFormat("0.00");
         String roundedTipAmount = df.format(tipamt);
         String roundedTotalBill = df.format(totalbill);
         String roundedPerPersonCostBeforeTip = df.format(perpersoncostbfr);
@@ -39,9 +39,9 @@ public class TipCalculator {
      //TEST YOUR PROGRAM IN main
      public static void main(String[] args) {
         //try different values for people, percent, and cost to test your program before running test cases
-        int people=6; 
-        int percent = 25;
-        double cost = 52.27;             
+        int people=2; 
+        int percent = 5;
+        double cost = 29.56;             
         
         System.out.println(calculateTip(people, percent, cost)); 
     }
