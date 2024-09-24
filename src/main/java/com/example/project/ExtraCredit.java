@@ -1,13 +1,34 @@
 package com.example.project;
 
+import java.util.Scanner;
+
 import java.text.DecimalFormat;
 
-public class TipCalculator {
+public class ExtraCredit {
     //WRITE YOUR PROGRAM IN calculateTip
     public static String calculateTip(int people, int percent, double cost) { //You must use these  variable in your calculations
         //DO NOT DELETE ANY OF THE CODE BELOW      
-
+        Scanner scanfood = new Scanner(System.in);
+        
         StringBuilder result = new StringBuilder();
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter an item name or -1 to finish:");
+        String character = "-1";
+    
+        // the while loop condition is checked,
+        // and if TRUE, runs the code inside.
+        // when the code inside is done running, the condition is rechecked,
+        // and the loop repeats as long as the condition remains TRUE.
+        // when the condition becomes FALSE, it stops
+        while (!character.equals("-1")) {
+            System.out.print("Item name: "+ character);
+            character = scan.nextLine();
+        }
+    
+        // code below the while loop runs after the loop ends
+        System.out.print("You entered ‘x’ :( ");
+    
 
         double tipamt = (percent*cost)/100;
         double totalbill = (tipamt+cost); 
