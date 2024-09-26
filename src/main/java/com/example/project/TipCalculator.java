@@ -22,7 +22,6 @@ public class TipCalculator {
         String roundedPerPersonTip = df.format(perpersontip);
         String roundedTotalCostPerPerson = df.format(totalcostperperson);
 
-    
         result.append("-------------------------------\n");
         result.append("Total bill before tip: $"+ cost+"\n"); //concatenate to this string. DO NOT ERASE AND REWRITE
         result.append("Total percentage: "+ percent+ "%" + "\n");
@@ -32,8 +31,6 @@ public class TipCalculator {
         result.append("Tip per person: $"+ roundedPerPersonTip+"\n");
         result.append("Total cost per person: $"+ roundedTotalCostPerPerson+"\n");
         result.append("-------------------------------\n");
-
-
         return result.toString();
     }
      //TEST YOUR PROGRAM IN main
@@ -42,7 +39,8 @@ public class TipCalculator {
         int people=2; 
         int percent = 5;
         double cost = 29.56;             
-        
         System.out.println(calculateTip(people, percent, cost)); 
     }
  }
+
+// source: https://docs.oracle.com/javase/tutorial/java/data/numberformat.html
